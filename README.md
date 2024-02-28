@@ -1,6 +1,67 @@
 # [<img src="https://ipinfo.io/static/ipinfo-small.svg" alt="IPinfo" width="24"/>](https://ipinfo.io/) IPinfo PHP Client Library
 
-This is the official PHP client library for the [IPinfo.io](https://ipinfo.io) IP address API, allowing you to look up your own IP address, or get any of the following details for an IP:
+This is the official PHP client library for the [IPinfo.io](https://ipinfo.io) IP address API, allowing you to look up your own IP address, or get any of the following details for an IP:ip:
+"102.132.97.0",
+city:
+"Alexandria",
+region:
+"Alexandria",
+country:
+"EG",
+loc:
+"31.2018,29.9158",
+org:
+"AS32934 Facebook, Inc.",
+timezone:
+"Africa/Cairo",
+asn:
+Object,
+asn:
+"AS32934",
+name:
+"Facebook, Inc.",
+domain:
+"facebook.com",
+route:
+"102.132.97.0/24",
+type:
+"business",
+company:
+Object,
+name:
+"HBE1.01",
+domain:
+"fb.com",
+type:
+"business",
+privacy:
+Object,
+vpn:
+false,
+proxy:
+false,
+tor:
+false,
+relay:
+false,
+hosting:
+false,
+service:
+"",
+abuse:
+Object,
+address:
+"1 Hacker Way, Menlo Park, United States",
+country:
+"US",
+email:
+"abaskett@fb.com",
+name:
+"Andrew Baskett",
+network:
+"102.132.97.0/24",
+phone:
+"tel:+1-650-853-1300",
  - [IP to Geolocation data](https://ipinfo.io/ip-geolocation-api) (city, region, country, postal code, latitude, and longitude)
  - [ASN information](https://ipinfo.io/asn-api) (ISP or network operator, associated domain name, and type, such as business, hosting, or company)
  - [Company details](https://ipinfo.io/ip-company-api) (the name and domain of the business that uses the IP address)
@@ -33,7 +94,7 @@ use ipinfo\ipinfo\IPinfo;
 
 $access_token = '123456789abc';
 $client = new IPinfo($access_token);
-$ip_address = '216.239.36.21';
+$ip_address = '';
 $details = $client->getDetails($ip_address);
 
 echo $details->city; // Mountain View
@@ -69,7 +130,7 @@ $client = new IPinfo($access_token);
 $details->hostname; // cpe-104-175-221-247.socal.res.rr.com
 ```
 
-#### Country Name
+#### Country Egypt 
 
 `Details->country_name` will return the country name, as supplied by the `countries` object. See below for instructions on changing that object for use with non-English languages. `Details->country` will still return the country code.
 
